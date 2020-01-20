@@ -21,20 +21,25 @@
           <mat-icon>person</mat-icon>
           Invite User
         </ng-template>
-        <div class="tab-content">
-          <div class="form-group">
-            <div class="label">Name</div>
-            <input id="name" type="text">
+        <form [formGroup]="createUserForm">
+          <div class="tab-content">
+            <div class="form-group">
+              <div class="label">Name</div>
+              <input id="name" type="text" formControlName="name">
+            </div>
+            <div class="form-group">
+              <div class="label">Email</div>
+              <input id="email" type="email" formControlName="email">
+            </div>
           </div>
-          <div class="form-group">
-            <div class="label">Email</div>
-            <input id="email" type="email">
+          <div class="text-area-group">
+            <div class="label">Your message</div>
+            <textarea name="message" id="message" cols="14" rows="4"
+                      placeholder="Customize your checking invite"
+                      formControlName="message"
+            ></textarea>
           </div>
-        </div>
-        <div class="text-area-group">
-          <div class="label">Your message</div>
-          <textarea name="message" id="message" cols="14" rows="4" placeholder="Customize your checking invite"></textarea>
-        </div>
+        </form>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
@@ -76,8 +81,8 @@
   <hr class="footer-divider">
   <mat-card-footer>
     <div class="card-actions">
-      <button>Cancel</button>
-      <button class="button-proceed">Invite</button>
+      <button (click)="onReset(createUserForm)">Cancel</button>
+      <button class="button-proceed" (click)="onSubmit(createUserForm)" [disabled]="!createUserForm.valid">Invite</button>
     </div>
   </mat-card-footer>
 </mat-card>

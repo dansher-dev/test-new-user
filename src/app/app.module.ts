@@ -11,6 +11,7 @@ import {
   MatSelectModule,
   MatTabsModule
 } from '@angular/material';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import {
     MatTabsModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
