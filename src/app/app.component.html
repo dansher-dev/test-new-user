@@ -48,7 +48,7 @@
     <hr>
     <div class="checkbox-group">
       <mat-checkbox #checkbox1>Checklist</mat-checkbox>
-      <mat-select disableOptionCentering [disabled]="!checkbox1.checked" [(value)]="selected1" panelClass="myPanelClass">
+      <mat-select disableOptionCentering [disabled]="!checkbox1.checked" [(value)]="selected[0]" panelClass="myPanelClass">
         <mat-option value="option1">View only</mat-option>
         <mat-option value="option2">No access</mat-option>
         <mat-option value="option3">Full access</mat-option>
@@ -57,7 +57,7 @@
     <hr>
     <div class="checkbox-group">
       <mat-checkbox #checkbox2>Budget</mat-checkbox>
-      <mat-select disableOptionCentering [disabled]="!checkbox2.checked" [(value)]="selected2" panelClass="myPanelClass">
+      <mat-select disableOptionCentering [disabled]="!checkbox2.checked" [(value)]="selected[1]" panelClass="myPanelClass">
         <mat-option value="option1">View only</mat-option>
         <mat-option value="option2">No access</mat-option>
         <mat-option value="option3">Full access</mat-option>
@@ -66,7 +66,7 @@
     <hr>
     <div class="checkbox-group">
       <mat-checkbox #checkbox3>Guest List</mat-checkbox>
-      <mat-select disableOptionCentering [disabled]="!checkbox3.checked" [(value)]="selected3" panelClass="myPanelClass">
+      <mat-select disableOptionCentering [disabled]="!checkbox3.checked" [(value)]="selected[2]" panelClass="myPanelClass">
         <mat-option value="option1">View only</mat-option>
         <mat-option value="option2">No access</mat-option>
         <mat-option value="option3">Full access</mat-option>

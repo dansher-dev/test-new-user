@@ -7,7 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'testing-modal-app';
-  selected1 = 'option1';
-  selected2 = 'option2';
-  selected3 = 'option3';
+  selected = ['option1', 'option2', 'option3'];
 }
