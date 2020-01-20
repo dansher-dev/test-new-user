@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IOptions } from './options';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'testing-modal-app';
-  selected = ['option1', 'option2', 'option3'];
+  values: IOptions[] = [
+    {value: 'option1', label: 'View only'},
+    {value: 'option2', label: 'No access'},
+    {value: 'option1', label: 'Full Access'}
+    ];
 }

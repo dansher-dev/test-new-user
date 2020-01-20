@@ -45,34 +45,33 @@
       </mat-tab>
     </mat-tab-group>
     <div class="checkbox-title">Vendor name</div>
-    <hr>
-    <div class="checkbox-group">
-      <mat-checkbox #checkbox1>Checklist</mat-checkbox>
-      <mat-select disableOptionCentering [disabled]="!checkbox1.checked" [(value)]="selected[0]" panelClass="myPanelClass">
-        <mat-option value="option1">View only</mat-option>
-        <mat-option value="option2">No access</mat-option>
-        <mat-option value="option3">Full access</mat-option>
-      </mat-select>
+    <div class="checkbox-container">
+      <hr>
+      <div class="checkbox-group">
+        <mat-checkbox #checkbox1>Checklist</mat-checkbox>
+        <mat-select disableOptionCentering [disabled]="!checkbox1.checked" [value]="values[0].value"
+                    panelClass="myPanelClass">
+          <mat-option *ngFor="let item of values" [value]="item.value">{{  item.label }}</mat-option>
+        </mat-select>
+      </div>
+      <hr>
+      <div class="checkbox-group">
+        <mat-checkbox #checkbox2>Budget</mat-checkbox>
+        <mat-select disableOptionCentering [disabled]="!checkbox2.checked" [value]="values[1].value"
+                    panelClass="myPanelClass">
+          <mat-option *ngFor="let item of values" [value]="item.value">{{  item.label }}</mat-option>
+        </mat-select>
+      </div>
+      <hr>
+      <div class="checkbox-group">
+        <mat-checkbox #checkbox3>Guest List</mat-checkbox>
+        <mat-select disableOptionCentering [disabled]="!checkbox3.checked" [value]="values[2].value"
+                    panelClass="myPanelClass">
+          <mat-option *ngFor="let item of values" [value]="item.value">{{  item.label }}</mat-option>
+        </mat-select>
+      </div>
+      <hr>
     </div>
-    <hr>
-    <div class="checkbox-group">
-      <mat-checkbox #checkbox2>Budget</mat-checkbox>
-      <mat-select disableOptionCentering [disabled]="!checkbox2.checked" [(value)]="selected[1]" panelClass="myPanelClass">
-        <mat-option value="option1">View only</mat-option>
-        <mat-option value="option2">No access</mat-option>
-        <mat-option value="option3">Full access</mat-option>
-      </mat-select>
-    </div>
-    <hr>
-    <div class="checkbox-group">
-      <mat-checkbox #checkbox3>Guest List</mat-checkbox>
-      <mat-select disableOptionCentering [disabled]="!checkbox3.checked" [(value)]="selected[2]" panelClass="myPanelClass">
-        <mat-option value="option1">View only</mat-option>
-        <mat-option value="option2">No access</mat-option>
-        <mat-option value="option3">Full access</mat-option>
-      </mat-select>
-    </div>
-    <hr>
   </mat-card-content>
   <hr class="footer-divider">
   <mat-card-footer>

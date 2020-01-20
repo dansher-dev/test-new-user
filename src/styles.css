@@ -3,15 +3,15 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.container {
+mat-card.container {
   width: 40%;
   margin: 5% 30%;
 }
 
-.tittle-container {
+.tittle-container, mat-card-subtitle {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 35px;
 }
 mat-icon {
   color: rgba(0, 0, 0, 0.541176);
@@ -20,11 +20,12 @@ mat-icon {
 
 .tab-content {
   margin-top: 20px;
+  margin-left: 27px;
   display: flex;
 }
 
 .mat-tab-label {
-  width: 40%;
+  width: 44%;
 }
 .mat-tab-label-active {
   color: #ff484a;
@@ -41,8 +42,8 @@ mat-icon {
 }
 
 .text-area-group {
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 35px;
+  margin-left: 38px;
 }
 
 .label {
@@ -50,12 +51,16 @@ mat-icon {
 }
 
 .checkbox-title {
-  margin: 20px 0 10px 10px;
+  margin: 20px 0 10px 38px;
 }
 
 .checkbox-group {
   display: flex;
   justify-content: space-between;
+}
+
+.checkbox-container {
+  margin: 0 38px;
 }
 
 input {
@@ -66,7 +71,7 @@ input {
 textarea {
   padding: 10px;
   font-size: 14px;
-  width: 90%;
+  width: 88%;
   resize: none;
   border-color: rgb(238, 238, 238);
 }
@@ -80,7 +85,7 @@ mat-select {
 .card-actions {
   display: flex;
   justify-content: flex-end;
-  margin: 10px;
+  margin: 10px 45px 10px 10px;
 }
 
 button {
@@ -122,6 +127,9 @@ button {
   margin-top: 20px !important;
 }
 
+/*
+ * Start of media queries
+ */
 @media only screen and (max-width: 867px)  {
   .container {
     margin: 5% 5%;
@@ -139,9 +147,16 @@ button {
     justify-content: space-between;
     color: rgba(0, 0, 0, 0.541176);
   }
+  .card-actions {
+    margin-left: 30px;
+    justify-content: center;
+  }
 }
 
 @media only screen and (min-width: 867px)  {
+  mat-card.container {
+    padding: 16px 0;
+  }
   .button-close.mat-icon {
     display: block;
   }
@@ -150,3 +165,7 @@ button {
     display: block;
   }
 }
+
+/*
+ * End of media queries
+ */
