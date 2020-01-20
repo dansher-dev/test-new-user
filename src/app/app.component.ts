@@ -18,8 +18,13 @@ export class AppComponent {
       name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       message: new FormControl(''),
-    }
-  );
+      checklist1: new FormControl(false),
+      budget: new FormControl(false),
+      checklist2: new FormControl(false),
+      checkbox1: new FormControl('option1'),
+      checkbox2: new FormControl('option1'),
+      checkbox3: new FormControl('option1')
+    });
 
   public onReset(form: FormGroup): void {
     form.reset();
