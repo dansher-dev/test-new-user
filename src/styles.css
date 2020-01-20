@@ -1,1 +1,152 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+  width: 40%;
+  margin: 5% 30%;
+}
+
+.tittle-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+mat-icon {
+  color: rgba(0, 0, 0, 0.541176);
+  margin-right: 15px;
+}
+
+.tab-content {
+  margin-top: 20px;
+  display: flex;
+}
+
+.mat-tab-label {
+  width: 40%;
+}
+.mat-tab-label-active {
+  color: #ff484a;
+  border-bottom-color: #ff484a;
+}
+
+.mat-tab-label-active mat-icon {
+  color: #ff484a;
+}
+
+.form-group {
+  margin-left: 10px;
+  width: 45%;
+}
+
+.text-area-group {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.checkbox-title {
+  margin: 20px 0 10px 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  padding: 5px;
+  width: 90%;
+}
+
+textarea {
+  padding: 10px;
+  font-size: 14px;
+  width: 90%;
+  resize: none;
+  border-color: rgb(238, 238, 238);
+}
+
+mat-select {
+  width: 30% !important;
+  position: relative;
+  top: 5px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+button {
+  padding: 5px 35px;
+  background-color: rgb(238, 238, 238);
+  margin: 15px 10px;
+  border: 1px solid rgb(190, 193, 190);
+  border-radius: 2px;
+}
+
+.button-proceed {
+  background-color: #ff484a;
+  border: none;
+  color: aliceblue;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #218d8b;
+}
+
+.footer-divider {
+  display: none;
+}
+
+.button-close.mat-icon {
+  display: none;
+}
+
+.material-icons {
+  position: relative;
+  top: 5px
+}
+
+.mobile-close {
+  display: none;
+}
+
+.myPanelClass{
+  margin-top: 20px !important;
+}
+
+@media only screen and (max-width: 867px)  {
+  .container {
+    margin: 5% 5%;
+    padding: 10px 20px;
+    min-width: 380px;
+  }
+  .tab-content {
+    flex-direction: column;
+  }
+  .form-group {
+    width: 95%
+  }
+  .mobile-close {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, 0.541176);
+  }
+}
+
+@media only screen and (min-width: 867px)  {
+  .button-close.mat-icon {
+    display: block;
+  }
+  .footer-divider {
+    margin-top: 40px;
+    display: block;
+  }
+}
