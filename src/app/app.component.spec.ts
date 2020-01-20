@@ -1,5 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {MatButtonModule, MatCardModule, MatCheckboxModule, MatIconModule, MatSelectModule, MatTabsModule} from '@angular/material';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -7,6 +8,14 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [
+        MatIconModule,
+        MatCardModule,
+        MatTabsModule,
+        MatCheckboxModule,
+        MatSelectModule,
+        MatButtonModule
+      ]
     }).compileComponents();
   }));
 
@@ -14,18 +23,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'testing-modal-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('testing-modal-app');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to testing-modal-app!');
   });
 });
